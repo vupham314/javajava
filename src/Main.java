@@ -25,7 +25,7 @@ class Main{
         net_salary = ob.calculate_net_salary(basic_salary);
 
         System.out.println("here is you salary ");
-        System.out.println("Basic salary: " + basic_salary);
+        System.out.println("Basic salary: " + basic_salary + "$");
         System.out.println("Tax:\n" +
                 "     PF(" + Math.floor(ob.tax_PF*100) +"% of basic salary): -" + Math.floor(ob.tax_PF*basic_salary) + "$\n" +
                 "     IT(" + Math.floor(ob.tax_IT*100) +"% of basic salary): -" + Math.floor(ob.tax_IT*basic_salary) + "$");
