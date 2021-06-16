@@ -15,22 +15,25 @@ class Main{
 
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
-        Main staff_salary = new Main();
+        Main ob = new Main();
 
         double basic_salary = 0.0d;
         double net_salary = 0.0d;
 
         System.out.print("enter your basic salary: ");
         basic_salary = Double.parseDouble(scn.nextLine());
-        net_salary = staff_salary.calculate_net_salary(basic_salary);
+        net_salary = ob.calculate_net_salary(basic_salary);
 
         System.out.println("here is you salary ");
         System.out.println("Basic salary: " + basic_salary);
         System.out.println("Tax:\n" +
-                "     PF(" + Math.floor(staff_salary.tax_PF*100) +"% of basic salary): -" + Math.floor(staff_salary.tax_PF*basic_salary) + "$\n" +
-                "     IT(" + Math.floor(staff_salary.tax_IT*100) +"% of basic salary): -" + Math.floor(staff_salary.tax_IT*basic_salary) + "$");
+                "     PF(" + Math.floor(ob.tax_PF*100) +"% of basic salary): -" + Math.floor(ob.tax_PF*basic_salary) + "$\n" +
+                "     IT(" + Math.floor(ob.tax_IT*100) +"% of basic salary): -" + Math.floor(ob.tax_IT*basic_salary) + "$");
 
-
+        System.out.println("HRA: +" + ob.HRA + "$");
+        System.out.println("TA: +" + ob.TA + "$");
+        System.out.println("Others: +" + ob.other + "$");
+        System.out.println("total: " + net_salary + "$");
 
     }
 }
