@@ -9,6 +9,7 @@ public class ScannerDemo1 {
 		
 		System.out.println("Nhập vào tên lớp  : ");
 		String tenlop = input.nextLine();
+		
 		System.out.println(">> THÔNG TIN SINH VIÊN");
 		System.out.println("Họ tên : "+hoten);
 		System.out.println("Tuổi : "+tuoi);
